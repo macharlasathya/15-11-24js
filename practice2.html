@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head">
+        <h1>Counter App</h1>
+        <div class="value">0</div>
+        <button class="increment">increase</button>
+        <button class="decremnet">decrease</button>
+        <button class="reset">reset</button>
+
+    </div>
+7
+    <script>
+        let countValue=document.querySelector(".value")
+        let  increValue=document.querySelector(".increment")
+        let  decreValue=document.querySelector(".decremnet")
+        let  restvValue=document.querySelector(".reset")
+
+
+
+let count=0;
+
+function display()
+{
+    countValue.textContent=count;
+}
+
+        increValue.addEventListener("click" ,() =>
+    {
+        count++;
+        display()
+    });
+
+    decreValue.addEventListener("click",()=>
+{
+    count--;
+    display()
+});
+
+restvValue.addEventListener("click",()=>
+{
+    count=0;
+    display()
+}
+);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="counter-container">
+        <h1>counter App</h1>
+        <div id="count-Display">0</div>
+        <button class="increase">increase</button>
+        <button class="decrement">decrement</button>
+        <button class="reset">reset</button>
+
+    </div>
+    <script>
+        let  countDisplay = document.getElementById("count-Display")
+        let  incremnetBtn = document.querySelector(".increase")
+        let  decremnetBtn = document.querySelector(".decrement")
+        let  resetBtn = document.querySelector(".reset")
+
+      let count=0;
+
+      function display()
+      {
+        countDisplay.textContent=count;
+      }
+
+        incremnetBtn.addEventListener("click", () => {
+            count++;
+            display();
+        });
+
+        decremnetBtn.addEventListener("click", () => {
+            count--;
+            display();
+        });
+
+        resetBtn.addEventListener("click",  () =>
+    {
+        count=0;
+        display();
+    });
+
+    </script>
+</body>
+
+</html>
